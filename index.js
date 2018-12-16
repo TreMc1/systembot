@@ -154,7 +154,7 @@ client.on('guildMemberAdd', Ammar=> {
     .addField(' 👤  You are a number',`**[ ${Ammar.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Ammar.guild.name, Ammar.guild.iconURL, true)
-    var channel =Ammar.guild.channels.find('name', '🏠welcome')
+    var channel =Ammar.guild.channels.find('name', '👋🏻➼welcome')
     if (!channel) return;
     channel.send({embed : embed});
     });
@@ -188,7 +188,7 @@ client.on('guildMemberAdd', member => {
 
 client.on("ready", () => {
   function rb() {
-    client.guilds.get('523848119859937280').roles.find("name", "➤ King").setColor("RANDOM");
+    client.guilds.get('523848119859937280').roles.find("name", "➤King").setColor("RANDOM");
   };
   setInterval(rb, 1900);
 });
