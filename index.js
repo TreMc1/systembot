@@ -188,7 +188,7 @@ client.on('guildMemberAdd', member => {
 
 client.on("ready", () => {
   function rb() {
-    client.guilds.get('523848119859937280').roles.find("name", "➤King").setColor("RANDOM");
+    client.guilds.get('523848119859937280').roles.find("name", "King").setColor("RANDOM");
   };
   setInterval(rb, 1900);
 });
