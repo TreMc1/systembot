@@ -23,27 +23,6 @@ client.on('message', message => {
 
 /////////////////////////////////////////////////////////////////////////////
 
-client.on("message", message => { //clear
-var args = message.content.substring(prefix.length).split(" ");
-if (message.content.startsWith(prefix + "clear")) {
-if(!message.channel.guild) return message.reply('**Sorry but this is for servers only ❌**');         
-if(!message.member.hasPermission('ADMINSTRATOR')) return message.reply('**You do not have permission to delete chat ⚠️**');
-  var msg;
-  msg = parseInt();
-
-message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-message.channel.sendMessage("", {embed: {
-  title: "``Chats cleared ✔️``",
-  color: 0x5016f3, 
-  footer: {
-    
-  }
-}}).then(msg => {msg.delete(3000)});
-}
-});
-
-/////////////////////////////////////////////////////////////////////////////
-
 client.on('message', message => {
 
   if (message.author.bot) return;
@@ -105,7 +84,7 @@ client.on('ready', function(){
 /////////////////////////////////////////////////////////////////////////////
 
 client.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "Member");
+    let role = member.guild.roles.find("name", "➤ Member");
     member.addRole(role).catch(console.error);
 });
 
@@ -188,7 +167,7 @@ client.on('guildMemberAdd', member => {
 
 client.on("ready", () => {
   function rb() {
-    client.guilds.get('523848119859937280').roles.find("name", "King").setColor("RANDOM");
+    client.guilds.get('523848119859937280').roles.find("name", "➤ King").setColor("RANDOM");
   };
   setInterval(rb, 1900);
 });
@@ -283,11 +262,11 @@ invite link : https://discord.gg/Qhwn76H
 /////////////////////////////////////////////////////////////////////////////
 
 client.on('message', msg => {
-  if (msg.content === '/nope') {
+  if (msg.content === '!nope') {
     msg.reply('https://cdn.discordapp.com/attachments/514150173459611648/514365700932894742/stop___by_hikari_nj-dc5salo.gif');
   }
   {
-  if (msg.content === '/senpai')
+  if (msg.content === '!senpai')
     msg.reply('https://cdn.discordapp.com/attachments/514150173459611648/514366694999851012/c41.gif')
   }
 });
